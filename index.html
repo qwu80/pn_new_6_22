@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KC28TS4RKY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KC28TS4RKY');
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 10: Carrier Statistics</title>
+
+  <link href="./style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.1/d3.min.js"></script>
+
+  <link rel="stylesheet" href="./anythingzoomer.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="./anythingZoomer.js"></script>
+
+
+  <script src="./scroll.js"></script>
+  <script src="./sketch.js"></script>
+  <script src="./circle.js"></script>
+  <script src="./graph.js"></script>
+  <script src="./particle.js"></script>
+  <script src="./particleM.js"></script>
+  <!-- <script src="./prob.js"></script> -->
+</head>
+
+<body id="body_parent" onload="StartScroll()">
+  <a href="../index.html"><img id="back-icon" src="../images/arrow-left.svg" /></a>
+  <div class="container">
+    <div class="row title-row">
+      <h1 class="col-lg-12">P-N JUNCTION</h1>
+      <div class="col-lg-1"></div>
+      <p class="col-lg-10">
+       //
+      </p>
+      <div class="col-lg-1"></div>
+    </div>
+
+   
+
+    <div class="row sub-atomic-particle-row" id="scene_0">
+     
+     
+   
+    </div>
+
+
+
+  
+
+<!--    
+
+
+    <div class="row sub-atomic-particle-row" id="scene_1">
+      <div class="col-lg-4">
+        <h1>Diffusion (Electron and Hole)</h1>
+      
+        <p>
+       ////
+        </p>
+
+        <p>Electron Generation on the Left (/cm<sup>3</sup>/s):</p>
+        <input style="width: 100%;" type="range" min="1" max="10" value="1" id = "slider_1" onchange="setConcentration(this.value)">
+        <div class="sliderticks">
+
+    
+       
+          <p>1x10<sub>13</sub></p>
+          <p>2x10<sub>13</sub></p>
+          <p>3x10<sub>13</sub></p>
+        </div>
+
+
+        <p>Electron Velocity (cm/s): </p>
+        <input style="width: 100%;" type="range" min="1" max="9" value="1" id = "slider_2" onchange="setVelocity(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>10<sub>6</sub></p>
+          <p>0.5x10<sub>7</sub></p>
+          <p>0.9x10<sub>7</sub></p>
+        </div>
+
+        <p>Scattering Time (fs):</p>
+        <input style="width: 100%;" type="range" min="1" max="9" value="1" id = "slider_3" onchange="setScattering(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>10</p>
+          <p>50</p>
+          <p>90</p>
+
+        </div>
+
+        <p>Carrier Lifetime: </p>
+        <input style="width: 100%;" type="range" min="1" max="9" value="1" id = "slider_4" onchange="setDistance(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>0.1</p>
+          <p>0.5</p>
+          <p>0.9</p>
+
+        </div>
+
+
+        <button onclick="reset_scene1()">Reset</button>
+
+        <p>  Recombine</p>
+      
+
+        <label class="switch">
+          <input id="switch_re" type="checkbox" onchange="switch_recombine()">
+          <span class="slider round"></span>
+        </label>
+    
+
+
+    
+      </div>
+    </div> -->
+
+    <div class="row sub-atomic-particle-row" id="scene_1_5">
+      <div class="col-lg-4">
+        <h1>p-n junction</h1>
+      
+        <p>
+       ////
+        </p>
+
+
+        <!-- <p>Electric Field in Red Box:  <output type="text" id = "e_f_text"  val = "Math.round(e_field(this.value))"> </p>
+          <input style="width: 100%;" type="range" min="0" max="500" value="0" id = "slider_5"
+          onchange="e_field(this.value)" >
+          <div class="sliderticks">
+            <div>
+              <p>0</p>
+            </div>
+            <div>
+              <p>500</p>
+            </div>
+          </div> -->
+
+          <!-- <p>Electric Field rate:  <output type="text" id = "e_f_text"  val = "Math.round(e_field(this.value))"> </p>
+            <input style="width: 100%;" type="range" min="1" max="20" value="10" id = "slider_115"
+            onchange="e_field_r(this.value)" >
+            <div class="sliderticks">
+              <div>
+                <p>0.1</p>
+              </div>
+              <div>
+                <p>2</p>
+              </div>
+            </div> -->
+
+
+        <p>Donor Density (per cm<sup>3</sup>):  <output type="text" id = "add_h_text" val = "Math.round(add_h(this.value))"> </p>
+          <input style="width: 100%;" type="range" min="123" max="133" value="123" id = "slider_6"
+          onchange="add_h(this.value)" >
+          <div class="sliderticks">
+            <div>
+              <p>10<sub>13</sub></p>
+            </div>
+            <div>
+              <p>10<sub>14</sub></p>
+            </div>
+          </div>
+     
+
+
+        <!-- <p>Electron Velocity (cm/s): </p>
+        <input style="width: 100%;" type="range" min="1" max="9" value="1" id = "slider_6"onchange="setVelocity(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>10<sub>6</sub></p>
+          <p>0.5x10<sub>7</sub></p>
+          <p>0.9x10<sub>7</sub></p>
+        </div> -->
+
+        <p>Scattering Time (fs):</p>
+        <input style="width: 100%;" type="range" min="1" max="9" value="1"id = "slider_7" onchange="setScattering(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>10</p>
+          <p>50</p>
+          <p>90</p>
+
+        </div>
+
+        <p>factor E:</p>
+        <input style="width: 100%;" type="range" min="1" max="9" value="1"id = "slider_20" onchange="setFactor(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>1</p>
+          <p>5</p>
+          <p>9</p>
+
+        </div>
+
+        <p>Carrier Lifetime (&mu;s):</p>
+        <input style="width: 100%;" type="range" min="1" max="999" value="1" id = "slider_8"onchange="setDistance(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>0.1</p>
+          <p>0.5</p>
+          <p>0.9</p>
+
+        </div>
+
+
+        <button onclick="reset_scene1()">Reset</button>
+
+        <!-- <p>  Recombine</p>
+      
+
+        <label class="switch">
+          <input id="switch_re" type="checkbox" onchange="switch_recombine()">
+          <span class="slider round"></span>
+        </label> -->
+        <!-- <p>
+      
+        <input class="checkbox-freeze" type="checkbox" id="nn" name="te" value="te" onchange="resetGraph()">
+        <label for="te"> Real World Graph</label><br>
+      </p> -->
+      <!-- <p>
+        
+        <input class="checkbox-freeze" type="checkbox" id="nn_live" value="nn_live" checked onchange="resetGraph_live()">
+        <label for="nn_live"> Live Measurements</label><br>
+      </p> -->
+
+
+
+    
+      </div>
+    </div>
+
+
+    <div class="row sub-atomic-particle-row" id="scene_2">
+      <div class="col-lg-4">
+        <h1>Diffusion (Electron and Hole)</h1>
+      
+        <p>
+       ////
+        </p>
+
+        <p>Generation Rate in the Red Box (/cm<sup>3</sup>/s):</p>
+        <input style="width: 100%;" type="range" min="1" max="10" value="1" id = "slider_9"onchange="setConcentration(this.value)">
+        <div class="sliderticks">
+
+    
+       
+          <p>1x10<sub>13</sub></p>
+          <p>2x10<sub>13</sub></p>
+          <p>3x10<sub>13</sub></p>
+        </div>
+
+
+        <p>Electron Velocity (cm/s): </p>
+        <input style="width: 100%;" type="range" min="1" max="9" value="1" id = "slider_10"onchange="setVelocity(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>10<sub>6</sub></p>
+          <p>0.5x10<sub>7</sub></p>
+          <p>0.9x10<sub>7</sub></p>
+        </div>
+
+        <p>Scattering Time (fs):</p>
+        <input style="width: 100%;" type="range" min="1" max="9" value="1" id = "slider_11"onchange="setScattering(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>10</p>
+          <p>50</p>
+          <p>90</p>
+
+        </div>
+
+        <p>Carrier Lifetime (&mu;s):</p>
+        <input style="width: 100%;" type="range" min="1" max="4" value="1" step = "0.5" id = "slider_12"onchange="setDistance(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>0.1</p>
+          <p>0.5</p>
+          <p>0.9</p>
+
+        </div>
+
+        <p>Acceptor Density (per cm<sup>3</sup>):  <output type="text" id = "add_h_text" val = "Math.round(add_h(this.value))"> </p>
+          <input style="width: 100%;" type="range" min="123" max="133" value="123" id = "slider_13"
+          onchange="add_h(this.value)" >
+          <div class="sliderticks">
+            <div>
+              <p>10<sub>13</sub></p>
+            </div>
+            <div>
+              <p>10<sub>14</sub></p>
+            </div>
+          </div>
+
+
+        <button onclick="reset_scene1()">Reset</button>
+
+        <!-- <p>  Recombine</p>
+      
+
+        <label class="switch">
+          <input id="switch_re2" type="checkbox" onchange="switch_recombine()">
+          <span class="slider round"></span>
+        </label> -->
+        <!-- <p>
+      
+        <input class="checkbox-freeze" type="checkbox" id="nn" name="te" value="te" onchange="resetGraph()">
+        <label for="te"> Real World Graph</label><br>
+      </p> -->
+      <!-- <p>
+        
+        <input class="checkbox-freeze" type="checkbox" id="nn_live" value="nn_live" checked onchange="resetGraph_live()">
+        <label for="nn_live"> Live Measurements</label><br>
+      </p> -->
+
+
+
+    
+      </div>
+    </div>
+
+    <div class="row sub-atomic-particle-row" id="scene_3">
+      <div class="col-lg-4">
+        <h1>Diffusion (Electron and Hole)</h1>
+      
+        <p>
+       ////
+        </p>
+
+        <p>Generation Rate in the Red Box (/cm<sup>3</sup>/s):</p>
+        <input style="width: 100%;" type="range" min="1" max="10" value="1" id = "slider_14" onchange="setConcentration(this.value)">
+        <div class="sliderticks">
+
+    
+       
+          <p>1x10<sub>13</sub></p>
+          <p>2x10<sub>13</sub></p>
+          <p>3x10<sub>13</sub></p>
+        </div>
+
+
+        <p>Electron Velocity (cm/s): </p>
+        <input style="width: 100%;" type="range" min="1" max="9" value="1" id = "slider_15" onchange="setVelocity(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>10<sub>6</sub></p>
+          <p>0.5x10<sub>7</sub></p>
+          <p>0.9x10<sub>7</sub></p>
+        </div>
+
+        <p>Scattering Time (fs):</p>
+        <input style="width: 100%;" type="range" min="1" max="9" value="1" id = "slider_16" onchange="setScattering(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>10</p>
+          <p>50</p>
+          <p>90</p>
+
+        </div>
+
+        <p>Carrier Lifetime (&mu;s):</p>
+        <input style="width: 100%;" type="range" min="1" max="4" value="1" step = "0.5" id = "slider_17" onchange="setDistance(this.value)">
+        <div class="sliderticks">
+
+    
+          <p>0.1</p>
+          <p>0.5</p>
+          <p>0.9</p>
+
+        </div>
+
+        <p>Donor Density (per cm<sup>3</sup>):  <output type="text" id = "add_e_text_2" val = "Math.round(add_e(this.value))"> </p>
+          <input style="width: 100%;" type="range" min="123" max="133" value="123" id = "slider_18"
+          onchange="add_e(this.value)" >
+          <div class="sliderticks">
+            <div>
+              <p>10<sub>13</sub></p>
+            </div>
+            <div>
+              <p>10<sub>14</sub></p>
+            </div>
+          </div>
+
+
+        <button onclick="reset_scene1()">Reset</button>
+
+        <!-- <p>  Recombine</p>
+      
+
+        <label class="switch">
+          <input id="switch_re3" type="checkbox" onchange="switch_recombine()">
+          <span class="slider round"></span>
+        </label> -->
+        <!-- <p>
+      
+        <input class="checkbox-freeze" type="checkbox" id="nn" name="te" value="te" onchange="resetGraph()">
+        <label for="te"> Real World Graph</label><br>
+      </p> -->
+      <!-- <p>
+        
+        <input class="checkbox-freeze" type="checkbox" id="nn_live" value="nn_live" checked onchange="resetGraph_live()">
+        <label for="nn_live"> Live Measurements</label><br>
+      </p> -->
+
+
+
+    
+      </div>
+    </div>
+
+    <div class="row classical-model-row" id="scene_4">
+      <div class="col-lg-4">
+      
+
+      </div>
+    </div>
+
+
+  
+
+
+  
+
+
+
+
+    <!-- <div class="row graph-row" id="scene_5">
+      <div class="col-lg-4">
+        <h1>Scattering by Defects</h1>
+        <p>
+          In a perfect lattice, electrons and holes move freely in straight lines and nothing interfere with their
+          movement. However, any non-ideality such as replacement of an atom by another kind of atom (impurity), can
+          scatter electrons and holes. These impurities are called defects.
+        </p>
+        <p>
+          As we will see, scattering can also take place because of the vibration of the atoms at temperatures above 0K.
+        </p>
+      </div>
+    </div> -->
+
+
+    <!-- <div class="row graph-row" id="scene_6">
+      <div class="col-lg-4">
+        <h1>Electron-Hole Recombination</h1>
+        <p>
+          A free electron in the conduction band can return back to the vallance band filling an empty state. This way,
+          both the free electron and hole are annihilated. The lost energy may result in emission of a photon or it may
+          heat the lattice.
+        </p>
+
+        <svg id="d3-viz8">
+
+        </svg>
+        <p>
+          Click on the recombine button below to recombine the two charge carriers.
+        </p>
+      </div>
+    </div> -->
+
+
+
+    <!-- <div class="row graph-row" id="scene_7">
+      <div class="col-lg-4">
+        <h1>Thermal Generation and Scattering</h1>
+        <p>
+          Just like shining light, an electron can also get excited to the conduction band by the thermal energy of the
+          lattice. As one increases the temperature, the densities of electrons and holes increase drastically.
+        </p>
+        <p>
+          A higher temperature also means more lattice vibration; hence, more frequent carrier scatterings. Carriers
+          also move faster on average as temperature rises.
+        </p>
+        <p>Temperature (K): </p>
+        <input style="width: 100%;" type="range" min="0" max="300" value="0" onchange="setTemperature(this.value)">
+        <div class="sliderticks">
+          <p>0</p>
+          <p>75</p>
+          <p>150</p>
+          <p>225</p>
+          <p>300</p>
+        </div>
+        <input class="checkbox-freeze" type="checkbox" id="nuclei-freeze" name="te" value="te">
+        <label for="te"> Freeze Nuclei</label><br>
+        <input class="checkbox-freeze" type="checkbox" id="hole-freeze" name="ppr" value="ppr">
+        <label for="ppr">Freeze Holes</label><br>
+        <input class="checkbox-freeze" type="checkbox" id="electron-freeze" name="eer" value="eer">
+        <label for="eer"> Freeze Free Electrons</label><br>
+      </div>
+    </div> -->
+
+
+    <!-- <div class="row sub-atomic-particle-row" id="scene_8">
+      <div class="col-lg-4">
+        <h1>Conduction in Materials</h1>
+        <p>
+          In this manner, the band gap determines the conductivity of various materials.
+        </p>
+        <p>
+          Conductors don't have a band gap,so electrons can get excited even at 0K. Semi-conductors have moderate band
+          gaps, so they conduct at
+          higher temperatures. Insulators have very large band gaps, so they never conduct electricity.
+        </p>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      </div>
+    </div> -->
+
+    <div id="visualization">
+
+    </div>
+  </div>
+</body>
+
+</html>
